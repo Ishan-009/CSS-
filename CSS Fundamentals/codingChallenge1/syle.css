@@ -149,6 +149,10 @@ body {
   margin-right: 10px;
 }
 
+.extra-description {
+  margin-bottom: 20px;
+}
+
 /* segeregating color classes and default colro box class seperately adn thne defien color -box property in color-box class and different color property with different color class like .black, green etc */
 
 /* not to do this  */
