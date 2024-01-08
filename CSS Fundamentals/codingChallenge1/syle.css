@@ -1,9 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
 body {
   font-family: sans-serif;
 }
+
 .product {
   border: 5px solid black;
-  margin: 10px;
+  margin: 40px auto;
+  position: relative;
+  margin: 30px auto;
+  width: 65%;
+}
+
+.product::after {
+  position: absolute;
+  content: "SALE";
+  color: white;
+  background-color: red;
+  top: -10px;
+  left: -25px;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .product-content {
@@ -13,9 +40,12 @@ body {
 .product-title {
   font-weight: bolder;
   font-size: 30px;
-  background-color: gray;
+  background-color: #ebe5e4;
   padding: 2px;
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .price,
@@ -27,23 +57,144 @@ body {
 .add-cart {
   color: white;
   background-color: black;
-  height: 2rem;
-  width: 8rem;
+  height: 3.5rem;
+  width: 100%;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .add-cart:hover {
   background-color: white;
   color: black;
+  border-top: 5px solid black;
 }
 
 .details-list {
   list-style: square;
 }
 
+.more-info-link {
+  margin-bottom: 20px;
+}
+
 .more-info {
   color: black;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 .more-info:hover {
   text-decoration: none;
 }
+
+.product-img {
+  margin-bottom: 20px;
+}
+
+.shipping {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.product-line {
+  margin-bottom: 20px;
+}
+
+.details-title {
+  margin-bottom: 20px;
+}
+
+.details-list {
+  margin: 20px 20px;
+  font-weight: 700;
+}
+
+.color-options {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.pink {
+  background-color: pink;
+}
+
+.black {
+  background-color: black;
+}
+
+.color-box {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* segeregating color classes and default colro box class seperately adn thne defien color -box property in color-box class and different color property with different color class like .black, green etc */
+
+/* not to do this  */
+
+/* .black-color-box {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: black;
+}
+
+
+.yellow-color-box {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: black;
+} */
+
+/* / Instead do this  */
+/* 
+.black {
+  background-color: black;
+} */
+
+/* Segregating common color box property into one class , means there will be two classes, one classes denote common box property and color class which denotes color property of the box */
+/* 
+.color-box{
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin-right: 10px;
+} */
+
+/* adn then other color property  */
+/* 
+.black{
+  background-color: black;
+}
+
+.yellow{
+  background-color:yellow;
+} */
+
+/* with this we dont have to repeat same code for other classes and repititon is saved , its more readable and saves time better to implement this */
+
+/* take out common property of different elements or similrar elements in a one class and other properties/styling which makes them different put in different class, means more seperated and segregated classes */

@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   color: blue;
   font-size: 36px;
@@ -11,8 +16,42 @@ h1 {
 }
 
 h2 {
-  font-size: 23px;
+  font-size: 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: relative;
+}
+
+/* pseudo elements  */
+/* after/before */
+h2::after {
+  content: "TOP";
+  background-color: rgb(230, 230, 12);
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: -24px;
+  padding: 7px;
+  font-size: 14px;
+}
+
+/*  adjacent + first line pseudo element selector  */
+h3 + p::first-line {
+  color: red;
+}
+
+nav a:link {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a:last-child:link {
+  margin: 0;
+}
+
+nav a:link:hover {
+  text-decoration: none;
 }
 
 /*  */
@@ -20,6 +59,7 @@ p {
   font-size: 22px;
   font-family: sans-serif;
   line-height: 1.5;
+  margin-bottom: 30px;
   /* increases line height between multiple lines */
   /* 1.5 means it will be 1.5 times of the original font size */
 }
@@ -28,6 +68,7 @@ h3 {
   font-size: 30px;
   font-family: sans-serif;
   text-transform: uppercase;
+  background-color: rgb(204, 203, 203);
 }
 
 h4 {
@@ -41,12 +82,19 @@ p {
   font-size: 22px;
   font-family: sans-serif;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 li {
   font-family: sans-serif;
   font-size: 20px;
 }
+
+ul,
+li {
+  margin-left: 50px;
+}
+
 /* List Selector  */
 h1,
 h2,
@@ -54,6 +102,7 @@ h3,
 h4,
 li {
   font-family: sans-serif;
+  color: rgb(6, 203, 253);
 }
 
 /*  descendant selector  */
@@ -80,6 +129,16 @@ li {
 
 .main-header {
   background-color: white;
+  margin-bottom: 30px;
+  /*  vertical spacing  */
+  padding: 10px;
+}
+
+.container {
+  width: 700px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
 }
 
 aside {
@@ -90,10 +149,21 @@ aside {
   border-bottom: 5px solid blue;
   /* border-left: 5px solid blue; */
   /* border-right: 5px solid blue; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+  /* margin-top: 40px; */
+  /* enable to see concept of collapsing margin */
+
+  width: auto;
+}
+
+article {
+  margin-bottom: 60px;
 }
 
 body {
-  background-color: rgb(41, 133, 150);
+  /* background-color: rgb(41, 133, 150); */
 }
 
 /* psueod clases */
@@ -112,7 +182,7 @@ li:last-child {
 }
 
 li:nth-child(even) {
-  color: yellow;
+  color: black;
 }
 
 /* Misconception this wont work */
@@ -143,3 +213,25 @@ a:active {
 }
 
 /* LHVA for anchor pseudo classes  */
+
+.post-img {
+  width: 50%;
+  height: auto;
+}
+.second-header {
+  position: relative;
+  /* setting this block level element position as relative, so absoulte element takses reference of this block element and position himself accordingly */
+}
+.like-button {
+  position: absolute;
+  /* absoulute positioning */
+  bottom: 10px;
+  left: 230px;
+  right: 5px;
+  width: 100px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin: 5px;
+}
