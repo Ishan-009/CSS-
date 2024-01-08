@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+}
+.product {
+  border: 5px solid black;
+  margin: 10px;
+}
+
+.product-content {
+  margin: 10px;
+}
+
+.product-title {
+  font-weight: bolder;
+  font-size: 30px;
+  background-color: gray;
+  padding: 2px;
+  text-align: center;
+}
+
+.price,
+.details-title {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.add-cart {
+  color: white;
+  background-color: black;
+  height: 2rem;
+  width: 8rem;
+}
+
+.add-cart:hover {
+  background-color: white;
+  color: black;
+}
+
+.details-list {
+  list-style: square;
+}
+
+.more-info {
+  color: black;
+}
+
+.more-info:hover {
+  text-decoration: none;
+}

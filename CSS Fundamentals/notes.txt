@@ -1,0 +1,153 @@
+================= CSS Fundamentals  ======================
+
+text styling properties:- font-size, font-family, text-align, line-height, text-transform ,
+
+
+Default font size is 16 px for html document 
+
+Inheritence is followed in document for the elements as they are positioned later on.
+
+// Combining Selectors
+
+// Combining multiple elements selector to select multiple element together can help us to define properties or say similar properties to all the element at one place, together.
+
+// It kind of reduces our work in a way to repeating this process again and again in every element selectors
+
+
+// List Selectors
+
+select multiple element selector adn apply properties 
+li,h2,h3,h4,p{color:blue,font-family:sans-serif}
+
+
+descendant selector 
+
+this selector selects child element of the parent , means it would select elements, where footer is parent and paragraph is child , means paragraph is inside footer tag
+
+<footer>
+<p>Inside Footer </p>
+</footer>
+
+footer p {
+  font-style:italic;
+}
+
+
+header p {
+  font-style:italic
+}
+
+one more scenario what if there is more such elements present we want to apply the functionality to the specific elements , either you can specify more parent element or say add more detail to the descendant element about selecting element or in further lecture we are gonna learn about classes and ids , or we can use classes or ids for selecting elements
+
+1st way 
+Suppose thsi is html structure
+article 
+header
+
+
+onw way we can specify this 
+
+article header p {properties} 
+
+
+better way is classes and ids as it does not encoporate html document structure 
+
+classes & Ids 
+
+Ids :- to specify styling for an individual element specifically and can be use one time ideally 
+
+classes :- to style group of elements and apply properties 
+
+Usually we use classes more, not ids  in real world so that we are prepare in the future , if we need to reapply that element somewhere or resuse this same class style somewhere else , so if we use id we have to change css to id selector and as well as we have to change html element attribute from ids to class , so avoid this hassle and be ready for resue case of this property future we use classess 
+
+
+// Styling Colors:- 
+
+defining colors in css 
+
+
+// Element selctor:- when we directly select element by its name, like p , h1
+
+// Id Seelctor , selected by id and class selected by class name in the html document 
+
+
+// Background Color 
+
+.main-header{
+  background-color:red;
+}
+
+
+on border 
+
+we can use border properties on shorthand to for to apply styling for all sides of border which top bottom left right 
+or we can individually define them adn apply property as we want 
+
+
+// shorthand property 
+
+border:4px solid blue;
+
+// individual Border Sides property 
+
+boder-left:5px solid red;
+
+border-top : 10px solid black
+
+
+// ====== Pseudo Classes =====
+this propety selects the fisrt child of li 
+
+li:first-child{
+
+}
+
+this propety selects the last child of li 
+
+li:last-child
+
+nth child 
+
+li:nth-child(2){
+ // selects nth child element, 2 raise to n  elements in list
+}
+
+li:nth-child(odd){
+ // selects old child elements in the list 
+}
+
+
+but here is misconception 
+
+<article>
+<header></header>
+<p></p>
+</article>
+
+
+article p:first-child{
+  // this will not work
+}
+
+here pseudo select the first child of the article which is p but here p is not first child if p heave been above header element then it would select the p element and apply styling property 
+
+
+when we mix multiple element in selector pseudo classes doesnt work perfectly 
+
+but for elements like li, ul ol the pseudo class works perfectly 
+
+
+// Styling Hyperlinks 
+
+if we directly use styling on achor tag it will apply to every anchor tag with or without link in it 
+so this is not a proper way to apply styling to the anchor tag 
+
+so instead we can use pseudo class in that we can use prooperty attricute which is link 
+
+
+a:link{
+  color:light blue;
+}
+
+
+// so this will apply styling to only anchor tag which has link in it or say href attricute in it 
