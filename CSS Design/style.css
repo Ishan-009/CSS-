@@ -1,0 +1,241 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* using box sizing to avoid unnecessary spaces of padding and margins which equate to overall height of the container even though we have defined heigth something else */
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+  font-family: "Inter", sans-serif;
+  /* Implementing Typography based on our website personality */
+  color: #343a40;
+  border-bottom: 8px solid #087f5b;
+  /* Applying border at bottom of page and matching with palette color */
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header,
+section {
+  margin-bottom: 48px;
+}
+/* 30 / 36 / 44 / */
+h2 {
+  margin-bottom: 48px;
+  font-size: 34px;
+  letter-spacing: -1px;
+  /*Typography :- font size,  Letter Spacing and margins  */
+}
+
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #087f5b;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  /* Typography */
+  /* Keeping font weight 400 or highter than that, uppercase button letters, removing underlines and to apply padding or margin we have to use inline block  */
+
+  /* border-radius: 12%; */
+  border-radius: 1000px;
+  /* border-radius: 100px; */
+  /* Applying border raidus */
+  /* Here we are applying border radiues to button but applyign 12 px does not look that good on button , as button rounded will look better so if element is square we can implement border radius 50% but here it is not so in this situation we have to define border radius to be more than element height/width so then it would be automatically form button into rounded one , here we have implemented 1000px to be safe side as really large value but we can also implement 100px as it is also larger than element itself so thsi is one of the button border  radiues trick */
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 8px 12px;
+  /* able to implmenet padding as button is redefined as inline block in above css button common class selector */
+}
+
+img {
+  border-radius: 12px;
+  /* implementing border raidus on images */
+}
+
+.btn--big {
+  font-size: 20px;
+  padding: 16px 32px;
+}
+/* Applying paddign on the button to create space inside element but due to redefining anchor /this element as inline block  in common css selector */
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+  margin-top: 48px;
+}
+
+.header-text-box {
+  align-self: center;
+}
+/* / 44 / 52 / 62 / */
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  /* text-shadow: 8px 2px 10px rgba(0, 0, 0, 0.05); */
+
+  /* text-shadow:-    horizontal offset, vertical offset , blur of the shadow , color of the shadow */
+}
+/* 16 / 18 / 24 */
+
+.header-text {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+
+/* FEATURES */
+.features-icon {
+  stroke: #087f5b;
+  /* implementing stroke property to apply main color styling on icon */
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+.features-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.features-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* TESTIMONIAL */
+.testimonial-section {
+  background-color: #087f5b;
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  /* Implementing border raidus on testimonial section*/
+}
+
+.testimonial-box {
+  grid-column: 2 / -1;
+  align-self: center;
+}
+
+.testimonial-box h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+
+  /* typography  */
+  /* applying sizing and negative letter spacing to the header h2 to make it more natural  */
+}
+
+/* 20 / 24 / 30 / 36 / */
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 24px;
+  line-height: 1.7;
+  font-size: 18px;
+
+  /* Typography stuff */
+  /* Line heigth, letter spacing, font style , and margins  */
+}
+
+/* CHAIRS */
+
+.chair {
+  box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.05);
+  /* using shadow on boxes/card */
+
+  /* box-shadow:-    horizontal offset, vertical offset , blur of the shadow , optional:- scale the shadow up, color of the shadow */
+}
+
+.chair img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  /* removing border radius from left and right side of the img inside chair cards , as we only want to apply styling at top edges, to look more good and elegant */
+}
+
+.chair-box {
+  padding: 24px;
+}
+
+h3 {
+  margin-bottom: 24px;
+}
+
+.chair-details {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.chair-details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.chair-details li:last-child {
+  margin-bottom: 0;
+}
+
+.chair-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
+  /* applying width and stroke to the icon */
+}
+
+.chair-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+footer {
+  margin-bottom: 48px;
+}

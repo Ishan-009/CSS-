@@ -1,0 +1,3 @@
+for arhitecture design, we will be using sans serif type face in that inter font 
+
+using font system to give styling to the fonts
