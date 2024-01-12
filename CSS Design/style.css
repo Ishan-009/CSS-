@@ -36,7 +36,8 @@ body {
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 96px;
+  /* added white space to section to look stand out from eachother imlementign visual hierarchy */
 }
 /* 30 / 36 / 44 / */
 h2 {
@@ -101,7 +102,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .header-text-box {
@@ -110,7 +111,8 @@ header {
 /* / 44 / 52 / 62 / */
 
 h1 {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  /* implemented white spacing here to make heading stand out, law of proximity */
   font-size: 44px;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -135,7 +137,8 @@ img {
   /* implementing stroke property to apply main color styling on icon */
   width: 32px;
   height: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  /* Implementign white spaces here to have visual heirarchy */
 }
 
 .features-title {
@@ -181,6 +184,14 @@ img {
 
   /* Typography stuff */
   /* Line heigth, letter spacing, font style , and margins  */
+
+  color: #e6fcf5;
+  /* implementing changing color to similar to lighter version of background color , to have good effect  */
+}
+
+.testimonial-author {
+  color: #c3fae8;
+  /*  Implementing lighter shade of the color for the testimonial author , but bit darker than testimonial text , as we want it to stand out and have differernt effect*/
 }
 
 /* CHAIRS */
@@ -200,7 +211,8 @@ img {
 }
 
 .chair-box {
-  padding: 24px;
+  padding: 32px;
+  /* ADding paddign to create more spcae inside to look card box better, white spacing */
 }
 
 h3 {
@@ -209,7 +221,8 @@ h3 {
 
 .chair-details {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  /* implementign more white space to make section look good and visual heirarcny seperate between elements */
 }
 
 .chair-details li {
@@ -234,6 +247,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  align-items: center;
 }
 
 footer {
