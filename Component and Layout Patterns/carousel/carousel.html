@@ -49,9 +49,10 @@
         padding: 32px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center;  */
         gap: 96px;
         padding-left: 86px;
+        position: relative;
       }
 
       .testimonial-text {
@@ -69,6 +70,65 @@
         margin-bottom: 5px;
         color: #c3fae8;
       }
+
+      /* controls  */
+
+      .btn {
+        background-color: white;
+        border: none;
+        height: 40px;
+        width: 40px;
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* using tranform:- translate property to center the element , here we are using the element heigth to uplift himself of half of the heigth in first argument which is x axis horizontal and next argument specifies y axis , we use the property to move around the eleement adn centering the element position as it is reliable approach then usign random px values in top bottom left adn right positioning of the element  */
+      }
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      /* .dots */
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot--green {
+        background-color: #087f5b;
+      }
     </style>
   </head>
   <body>
@@ -82,14 +142,14 @@
         <p class="testimonial-author">Maria de Almedia</p>
         <p class="testiominial-job">Senior Product Manager at EDP Commercial</p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="w-6 h-6 btn-icon"
         >
           <path
             stroke-linecap="round"
@@ -98,14 +158,14 @@
           />
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6"
+          class="w-6 h-6 btn-icon"
         >
           <path
             stroke-linecap="round"
@@ -114,6 +174,13 @@
           />
         </svg>
       </button>
+
+      <div class="dots">
+        <button class="dot dot--green">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>
