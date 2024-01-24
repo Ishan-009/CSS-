@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /*
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    */
+    /* 
+    MAIN COLOR: #087f5b
+    GREY COLOR: #343a40
+    */ -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: "Rubik", sans-serif;
+        color: #444;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1200px;
+      }
+
+      header {
+        height: 100vh;
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(hero.jpg);
+        /* here we use background image with linear gradient to create contrast between text and image by lowering contrast of the image which outshadows the text */
+        background-size: cover;
+        color: white;
+      }
+      nav {
+        font-size: 28px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        /* applying space between so to put elements at both at different ends */
+        color: white;
+        /* applying padding as applying margin would create blank white space above the element, sa we want to remain in image and need space we use padding  */
+        padding-top: 20px;
+      }
+
+      .header-container {
+        width: 1200px;
+
+        position: absolute;
+        /* In relation to the parent size */
+        top: 50%;
+        left: 50%;
+
+        /* In relation to the element size */
+        transform: translate(-50%, -50%);
+      }
+
+      .inner-header-container {
+        width: 50%;
+      }
+
+      h1 {
+        font-size: 48px;
+        margin-bottom: 32px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 48px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        font-size: 20px;
+        font-weight: 600;
+        background-color: orange;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 16px 32px;
+        /* top/bottom 16px padding and left/right :- 32px padding */
+        border-radius: 9px;
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+
+      section {
+        padding: 96px 0;
+        background-color: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div>Logo</div>
+        <div>Navigation</div>
+      </nav>
+      <div class="container header-container">
+        <div class="inner-header-container">
+          <h1>A Healthy Meal delivered to the door, every single day</h1>
+          <p>
+            The 365-days-per-year food subscription that will make you eat
+            healty again. Tailored to your personal tastes and nutritional
+            needs.
+          </p>
+          <a href="" class="btn">Start Eating Well</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h2>Some Random Heading</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, laborum.
+          Et atque perferendis rem illum eaque saepe, consectetur soluta sunt
+          omnis quisquam eligendi provident quidem qui quibusdam deleniti
+          architecto illo.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
