@@ -53,7 +53,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -84,12 +84,14 @@ body {
   color: #333;
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
+  font-weight: 700;
 }
 
 .hero-description {
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 4.8rem;
+  font-weight: 500;
 }
 
 .btn:link,
@@ -101,6 +103,7 @@ body {
   border-radius: 9px;
   text-decoration: none;
   display: inline-block;
+  font-weight: 600;
 
   /* Transition it allows use to do animation to change value of one proeprty to another value in form of transiton */
   /* commonly used 0.3s */
@@ -142,4 +145,46 @@ body {
 /* Generic Helper class, "margin-right-sm" used in btn to add margin right as if I added this proeprty directly to button if I want to reuse that button css propety that could affect design of the button if used somewhere else */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  /* centered the meals container, and applied gap to have a gap between two elements which are images and text div element */
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.deliverd-imgs {
+  display: flex;
+}
+
+.deliverd-imgs img {
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  /* applied negative margin for image to overlay on each other effect which is very common with groupo of images of customer round images */
+  margin-right: -1.6rem;
+  /* applying border to images is useful for fine detailing */
+  border: 3px solid #fdf2e9;
+}
+/* setting margin :0 for last child as we dont want to apply margin for last element to the right as it affects our layout */
+.deliverd-imgs img:last-child {
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.delivered-text {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.delivered-text span {
+  /* using higher font-weight to stand out our figure 250,000 text in terms of visual heirarchy */
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #cf711f;
+  /* checking color contrasta between text color and background on coolrs website */
 }
