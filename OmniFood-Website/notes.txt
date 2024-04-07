@@ -1,1 +1,4 @@
 using website tints and shade.com for getting lighter version of the color shade for our website as it is startup website , here we used lighter shades or version of the color in our website sections.
+
+
+its bettter to even define header element classes its kind of rule that jonas has in which he applies style to the classes only adn then maybe he selects element inside class based on selector like .header p
