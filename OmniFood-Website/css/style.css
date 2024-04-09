@@ -49,6 +49,39 @@
      */
 
 /* -------General Resusable Styling--------- */
+
+.container {
+  /* using max width means max width for any screen is 120rem and based on screen it will automatically adjust if the screen cannot fit thsi max width */
+  max-width: 120rem;
+  /* same margin at left and right side so content will be horizontally  center */
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+/*  Creating variation of grid classes so we can use different variation in different usecase independency without getting tied to  1 grid styling with only 2 grids cols but there we cant implement 3 grid cols styling  */
+
+/* with this we can reuse these all variation of grid classes like grid of 2 cols or 3 cols depending on our usecase without changing styling of css class */
+
+/* Reusable grids / classess  */
+
+.grid--2cols {
+  /* repeat 2 times 1fr, just like writing 1fr, 1fr  */
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3cols {
+  /* repeat 3 times 1fr, just like writing 1fr, 1fr  */
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4cols {
+  /* repeat 4 times 1fr, just like writing 1fr, 1fr  */
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .btn:link,
 .btn:visited {
   background-color: #e67e22;
@@ -257,6 +290,26 @@ body {
   font-size: 1.8rem;
   color: #cf711f;
   /* checking color contrasta between text color and background on coolrs website */
+}
+
+/* --------------------------------------------------- */
+
+/* ----------How it works section ?-----------------  */
+
+.section-how {
+  padding: 9.6px 0;
+  background-color: orangered;
+}
+
+.section-how div {
+  padding: 100px;
+  font-size: 50px;
+}
+
+.section-how div div {
+  padding: 100px;
+  font-size: 5rem;
+  background-color: #333;
 }
 
 /* --------------------------------------------------- */
