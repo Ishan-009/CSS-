@@ -177,6 +177,7 @@
 
 .logos img {
   height: 3.2rem;
+  /* filter to reduce brightness and opactiy to 50% so that we could make our image icon grey so it could not catch too much visual attention */
   filter: brightness(0);
   opacity: 50%;
 }
