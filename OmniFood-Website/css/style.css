@@ -58,46 +58,6 @@
   width: 100%;
 }
 
-.heading-primary,
-.heading-secondary {
-  letter-spacing: -0.5px;
-  font-weight: 700;
-  color: #333;
-}
-
-.heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
-  letter-spacing: 0.75px;
-}
-
-.heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1;
-  color: #333;
-  /* Two other design choices  */
-  /* color: #45260a;
-  /* has bit of blue in grey below */
-  /* color: #343a40; */
-  margin-bottom: 9.6rem;
-}
-
-.heading-teritiary {
-  font-size: 3rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
-
-.subheading {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #e67e22;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-}
-
 .hero-description {
   font-size: 2rem;
   line-height: 1.5;
@@ -271,4 +231,93 @@
 }
 .meal-attribute {
   font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #e67e22;
+  /* you can use font size to style the icon to make them large  */
+  /* font-size: 2.4rem; */
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 1000px;
+  font-weight: 600;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  /* here after applying border radiues we cant see the roundness properly because the image is laying on top of element and covering the roundness basically overflowing the element so in order to fix that we have to make overflow property hidden */
+  overflow: hidden;
+}
+
+/* wrapped all the meal content as we wanted padding in meal content not whole card alogn with image */
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #82c91e;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icons {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+/* Here, we are applying hover property on meal card, using transform:translateY with negative value as we want it to move up */
+/* Using transition for the effect , higher transtion seconds as eleemnt is larger */
+
+/* using box shadow and make it one step larger according to our css styling and spacing system. and then decreasing opcacity as we go to source of light the shadow decreases in opacity */
+
+/* a shadow that is more diffused and bigger basically  also naturally should be lighter */
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  transition: all 0.4s;
+  box-shadow: 0 3.2rem 6.4em rgba(0, 0, 0, 0.006);
 }
