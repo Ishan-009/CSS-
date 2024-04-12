@@ -184,12 +184,13 @@
   position: relative;
   /* z-index: 10; */
 }
-
+/* common pseduo element properites */
 .step-img-box::before,
 .step-img-box::after {
   content: "";
   display: block;
   border-radius: 50%;
+  /* using position absolute and relative trick to center the content instead of flex or grid because its pseudo element not suitable to apply flex or grid as they are not actual dom elements so we have to used absolute positioning */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,17 +198,23 @@
 }
 
 /* --------------------------------------------------- */
+
+/* using pseudo element so that we have cleaner way of definging circle background behind the image rather than adding div element ot html element */
 .step-img-box::before {
   background-color: #fdf2e9;
+  /* applied higher z index I want this to  behind the ::after pseudo element  */
   z-index: -2;
   /* 60% of parent width */
   width: 60%;
+  /* using padding-bottom to define the height as pseudo element does not have height */
   padding-bottom: 60%;
   /* height: 60%; */
 }
 .step-img-box::after {
   background-color: #fae5d3;
+  /* using z index to put this element behind the parent element*/
   z-index: -1;
   width: 45%;
+  /* using padding-bottom to define the height as pseudo element does not have height */
   padding-bottom: 45%;
 }
