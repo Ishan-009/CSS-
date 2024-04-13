@@ -325,13 +325,22 @@
 /* *************Testimonials ************** */
 
 .section-testimonials {
-  padding: 9.6rem 0;
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  /* to fix spacing in grid while it decreasing view port  */
+  align-items: center;
+}
+
+.testimonial-container {
+  padding: 9.6rem;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
 }
 
 .testimonial-img {
@@ -347,7 +356,28 @@
 
 .testimonial-name {
   font-size: 1.6rem;
-  color: #777;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+
+/* to fix our transform scaling of imaging to overflow the parent element we applied overflow hidden on parent itself so it would only scale up image within itself */
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+/* applying scaling image along with transition for nice image hover scale effect */
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
 
 /* ********************************************* */

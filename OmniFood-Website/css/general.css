@@ -32,6 +32,7 @@
         Shade:-
         Accents:-
         Greys:- #555
+        #6F6F6F (lighest grey allowed on #FDF2E9)
 
           MAIN COLOR: #087f5b
           GREY COLOR: #343a40
@@ -48,6 +49,12 @@
 
     ---07 Whitespace
   
+
+    ----08 
+  Animation Properties Settings
+  Normal Transition Time : 0.3s
+  larger transition times    transition: all 0.4s;
+
     
     SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
