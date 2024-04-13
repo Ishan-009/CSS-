@@ -440,4 +440,33 @@
   transform: rotate(45deg);
 }
 
+/* ------------------------------------- Features Section ------------------------------------------------ */
+
+/* here feature icon we have implemented rounded border radius background for the icon , other stuff is basic styling system that we are following  */
+.feature-icon {
+  background-color: #fdf2e9;
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #e67e22;
+  margin-bottom: 3.2rem;
+  border-radius: 50%;
+  padding: 1.6rem;
+}
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* ------------------------------------------------------------------------------- */
